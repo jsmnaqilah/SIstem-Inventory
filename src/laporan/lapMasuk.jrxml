@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6551e8e4-1252-4593-b9ea-401753b76702">
+	<property name="ireport.zoom" value="4.177248169415665"/>
+	<property name="ireport.x" value="1529"/>
+	<property name="ireport.y" value="563"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     masuk.`idMasuk` AS masuk_idMasuk,
+     masuk.`kode` AS masuk_kode,
+     masuk.`namaBrg` AS masuk_namaBrg,
+     masuk.`tglMasuk` AS masuk_tglMasuk,
+     masuk.`jumlahMasuk` AS masuk_jumlahMasuk,
+     masuk.`idStaff` AS masuk_idStaff,
+     masuk.`idSupplier` AS masuk_idSupplier
+FROM
+     `masuk` masuk]]>
+	</queryString>
+	<field name="masuk_idMasuk" class="java.lang.Integer"/>
+	<field name="masuk_kode" class="java.lang.String"/>
+	<field name="masuk_namaBrg" class="java.lang.String"/>
+	<field name="masuk_tglMasuk" class="java.lang.String"/>
+	<field name="masuk_jumlahMasuk" class="java.lang.Integer"/>
+	<field name="masuk_idStaff" class="java.lang.String"/>
+	<field name="masuk_idSupplier" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1f0f9285-c1d5-483b-aadf-a7cb012ece5a" x="1" y="10" width="750" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="22" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[INVENTORY WORK PLACE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1f0f9285-c1d5-483b-aadf-a7cb012ece5a" x="1" y="28" width="750" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Jl. Jakarta Raya Gudang FC, Kota Jakarta Selatan, DKI Jakarta. No HP : 081234567891]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="233c400b-cf4a-40b3-affd-7c1f83bf9c97" x="0" y="65" width="749" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="01372ae3-f12e-498e-bd39-53cffb9864f6" x="0" y="45" width="336" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="73b44685-49b8-4ec2-bb21-53694bfe9d9b" x="0" y="7" width="752" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN BARANG MASUK]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="43aa5d8f-56f3-449f-a45d-b5c56c2cf493" mode="Opaque" x="1" y="2" width="107" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID MASUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="79dcc415-99ef-4651-9808-7040a71223f5" mode="Opaque" x="108" y="2" width="107" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c24b24a-6390-4100-85c5-d1180ace47cf" mode="Opaque" x="215" y="2" width="107" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA BARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd190429-b32b-4f19-a488-af6504376b7d" mode="Opaque" x="322" y="2" width="130" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL MASUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad27ef87-7c74-4fff-9158-fbbd49797796" mode="Opaque" x="452" y="2" width="107" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH MASUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8633f97e-2e76-4cd2-8d55-3ba1a91c240c" mode="Opaque" x="559" y="2" width="95" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID STAFF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d55ff35c-c38f-43d1-ac84-1294b5f0b171" mode="Opaque" x="654" y="2" width="96" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID SUPPLIER]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="65d335f6-854e-4421-b9aa-24faaed14396" mode="Transparent" x="1" y="3" width="106" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1aa1f5cb-af4c-4222-8c65-f4fb5a3b2493" mode="Transparent" x="107" y="3" width="106" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="b1e7f914-8aa9-4b7a-9eeb-e82961305668" mode="Transparent" x="213" y="3" width="109" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c0cee984-34b8-4243-a9ed-469df691abfb" mode="Transparent" x="322" y="3" width="130" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a52350a6-f600-4536-a900-8255f8ea9bf2" mode="Transparent" x="452" y="3" width="108" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="265a4402-6840-4ea4-8a9b-e3473de5f262" mode="Transparent" x="560" y="3" width="94" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e7e8003d-303d-4206-a10d-1a8e73854dcf" mode="Transparent" x="654" y="3" width="95" height="20"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="04b00eb1-620a-4c27-a729-7b5adce779a0" x="0" y="0" width="107" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_idMasuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="290a2784-ddeb-4e72-a1b1-b8bca2d84338" x="106" y="0" width="108" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_kode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="226d4857-afc3-46fb-8535-0fcaef809862" x="214" y="0" width="107" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_namaBrg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="88b137fb-254a-4a44-8828-c54f9d1ab498" x="321" y="0" width="131" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_tglMasuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="213b404a-de6c-4387-abb3-4c4e80bedcb1" x="559" y="0" width="95" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_idStaff}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e415ae61-8c51-4580-ba27-e78afd04a01a" x="654" y="0" width="95" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_idSupplier}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="b25dc081-db25-4aea-9832-f4396535c0af" mode="Transparent" x="1" y="1" width="106" height="19"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="d13f3cf0-02db-4c76-a339-737c077a9c78" mode="Transparent" x="107" y="1" width="106" height="19"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="d0b1e660-7db3-4ead-a981-5b39fa4a4ee0" mode="Transparent" x="213" y="1" width="109" height="19"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="30861edd-65c7-49b7-9b08-8cb7db5e3aed" mode="Transparent" x="322" y="1" width="130" height="19"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bb60ff5e-7a9e-4b18-871b-407a534226d4" mode="Transparent" x="559" y="1" width="95" height="19"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bf95f85d-dc1b-46ae-ae3e-3b9c450f52f6" mode="Transparent" x="654" y="1" width="95" height="19"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="1b9c9b70-f4b2-41ea-90af-0e13bfe2ddf5" x="452" y="1" width="108" height="19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{masuk_jumlahMasuk}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="bf78b86f-3b0d-4a33-b48e-2cf4bbb9a69d" mode="Transparent" x="452" y="1" width="107" height="19"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5adf34bb-f098-4ef6-8913-cb8bc825828e" mode="Transparent" x="609" y="61" width="125" height="21" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Manager Gudang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5adf34bb-f098-4ef6-8913-cb8bc825828e" mode="Transparent" x="609" y="15" width="125" height="21" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mengetahui, ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="7a5cafac-d445-44a8-ac92-a48d972ed6b8" x="321" y="1" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch"/>
+	</summary>
+</jasperReport>

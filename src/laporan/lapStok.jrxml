@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="db44f28b-759c-44e7-a16e-60a95a1eed9a">
+	<property name="ireport.zoom" value="1.6105100000000014"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     barang.`kode` AS barang_kode,
+     barang.`namaBrg` AS barang_namaBrg,
+     barang.`stok` AS barang_stok
+FROM
+     `barang` barang]]>
+	</queryString>
+	<field name="barang_kode" class="java.lang.String"/>
+	<field name="barang_namaBrg" class="java.lang.String"/>
+	<field name="barang_stok" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a0062958-55f0-44b2-9785-366f94c60f4b" x="0" y="0" width="555" height="39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN STOK BARANG]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement uuid="30945d19-b53c-4bfb-8b38-cf5f46ff74f3" x="324" y="9" width="231" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cb921aa9-2eda-46d9-8a2a-a5c4e372188e" mode="Opaque" x="0" y="0" width="185" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KODE BARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cbfd17fb-e23c-4ea5-88f8-7e2669b9ec0c" mode="Opaque" x="185" y="0" width="185" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOK BARANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4fd3ea84-5fdc-4bc7-9d14-56569d51e498" mode="Opaque" x="370" y="0" width="185" height="20" backcolor="#FFCC66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA BARANG]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="78d48739-5201-4a12-96a2-6e838da04690" mode="Transparent" x="0" y="1" width="185" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="ad880f02-1517-4bea-88a7-a60f501cc020" mode="Transparent" x="185" y="1" width="185" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c0e525e8-d4e6-4273-870f-3434e0b00f1d" mode="Transparent" x="370" y="1" width="185" height="20"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="346a91d5-6b71-4f37-be6f-f1c010f89723" x="0" y="0" width="185" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barang_kode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8e5098a0-aed1-4676-9a44-9981b25dcc31" x="185" y="0" width="185" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barang_stok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="96575813-42a2-41da-b440-453d966c53ce" x="370" y="0" width="185" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barang_namaBrg}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="8254f763-ca43-4522-bcef-487a835de3a0" mode="Transparent" x="0" y="1" width="185" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="80aa9ab0-dc47-47ce-ac67-292e0c08e8b0" mode="Transparent" x="185" y="1" width="185" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="6a1fd2c4-5546-4e8a-99b8-080dcf1d819a" mode="Transparent" x="370" y="1" width="185" height="20"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="19fbc3b3-a60c-4648-8ac8-3c533b27fc35" x="224" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
